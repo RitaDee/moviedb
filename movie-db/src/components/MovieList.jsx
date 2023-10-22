@@ -5,7 +5,7 @@ import MovieCard from './MovieCard';
 
 const API_URL = "https://api.themoviedb.org/3/movie/popular?api_key=d2f7d216c49d9023f417027b471e0d24";
 
-function MovieList() {
+const MovieList = () => {
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState('');
 
