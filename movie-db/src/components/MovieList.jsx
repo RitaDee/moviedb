@@ -3,7 +3,7 @@ import Axios from 'axios';
 import Navbar from './Navbar';
 import MovieCard from './MovieCard';
 
-const API_URL = "https://api.themoviedb.org/3/movie/popular?api_key=d2f7d216c49d9023f417027b471e0d24";
+const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}`;
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
