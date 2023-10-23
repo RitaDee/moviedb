@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Axios from "axios";
 import Navbar from "./Navbar";
 import MovieCard from "./MovieCard";
+import Footer from "./Footer";
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 const popularMoviesURL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`;
@@ -48,7 +49,7 @@ const MovieList = () => {
   };
 
   return (
-    <div className="bg-gray-900 min-h-screen text-white">
+    <div className="bg-gray-900 min-h-screen text-white pt-24">
       <Navbar query={query} changeHandler={changeHandler} searchMovie={searchMovie} />
       {loading ? (
         <div className="text-center mt-4">Loading...</div>
@@ -61,6 +62,7 @@ const MovieList = () => {
           ))}
         </div>
       )}
+      <Footer />
     </div>
   );
 };

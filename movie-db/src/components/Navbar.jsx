@@ -1,7 +1,5 @@
-import React from 'react';
-
 const Navbar = ({ query, changeHandler, searchMovie }) => (
-  <nav className="bg-gray-800 text-white p-4">
+  <nav className="bg-gray-800 text-white p-4 fixed top-0 left-0 w-full z-10">
     <div className="container mx-auto flex items-center justify-between">
       <div className="text-2xl font-semibold pl-8">Movies</div>
       <form className="flex items-center" onSubmit={searchMovie}>
