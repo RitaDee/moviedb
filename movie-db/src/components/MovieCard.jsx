@@ -19,7 +19,7 @@ const MovieCard = ({
 
   return (
     <div className="max-w-sm bg-grey rounded-lg overflow-hidden shadow-lg m-3 p-1 border-gray-500 border">
-      <img src={imageUrl} alt={title} className="w-full h-72" />
+      <img src={imageUrl} alt={title} className="w-full lg:h-72" />
       <button
         className="bg-blue-500 mt-4 text-white px-4 py-2 w-full"
         onClick={handleShow}
@@ -42,7 +42,7 @@ const MovieCard = ({
             <p>IMDb: {vote_average}</p>
             <p>Release Date: {release_date}</p>
             <h6 className="my-2 font-bold">Overview</h6>
-            <p className="line-clamp-4">{overview}</p>
+            <p className="line-clamp-4 font-normal">{overview}</p>
             <button
               className="bg-blue-500 text-white rounded-lg px-4 py-2 mt-4"
               onClick={handleClose}
