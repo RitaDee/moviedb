@@ -18,10 +18,10 @@ const MovieCard = ({
   const handleClose = () => setShow(false);
 
   return (
-    <div className="max-w-sm bg-grey rounded-lg overflow-hidden shadow-lg m-4">
-      <img src={imageUrl} alt={title} className="w-full" />
+    <div className="max-w-sm bg-grey rounded-lg overflow-hidden shadow-lg m-3 p-1 border-gray-500 border">
+      <img src={imageUrl} alt={title} className="w-full h-72" />
       <button
-        className="bg-blue-500 mt-4 text-white rounded-lg ml-12 px-4 py-2"
+        className="bg-blue-500 mt-4 text-white px-4 py-2 w-full"
         onClick={handleShow}
       >
         View More
@@ -41,7 +41,7 @@ const MovieCard = ({
             <h3 className="text-2xl font-semibold my-2">{title}</h3>
             <p>IMDb: {vote_average}</p>
             <p>Release Date: {release_date}</p>
-            <h6 className="my-2">Overview</h6>
+            <h6 className="my-2 font-bold">Overview</h6>
             <p className="line-clamp-4">{overview}</p>
             <button
               className="bg-blue-500 text-white rounded-lg px-4 py-2 mt-4"
