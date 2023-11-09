@@ -5,7 +5,7 @@ This is a movie web application built with React, and Tailwind CSS.
 ## Demo
 ![Alt text](image.png)
 
-You can access the deployed application here: [Live Demo]()
+You can access the deployed application here: [Live Demo](https://moviedb-umber.vercel.app/)
 
 ## Features
 
