@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const Navbar = ({ query, changeHandler, searchMovie }) => (
   <nav className="bg-gray-800 text-white p-4 fixed top-0 left-0 w-full z-10">
     <div className="container mx-auto flex items-center justify-between">
@@ -21,5 +23,11 @@ const Navbar = ({ query, changeHandler, searchMovie }) => (
     </div>
   </nav>
 );
+
+Navbar.propTypes = {
+  query: PropTypes.string.isRequired, 
+  changeHandler: PropTypes.func.isRequired,
+  searchMovie: PropTypes.func.isRequired,
+};
 
 export default Navbar;
