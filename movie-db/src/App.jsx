@@ -1,11 +1,9 @@
-import MovieList from '../src/components/MovieList.jsx';
+import { MovieList } from '../src/components/MovieList.jsx';
 
-const App = () => {
+export const App = () => {
   return (
     <div>
       <MovieList />
     </div>
   )
 }
-
-export default App

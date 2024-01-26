@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import Axios from "axios";
-import Navbar from "./Navbar";
-import MovieCard from "./MovieCard";
-import Footer from "./Footer";
+import { Navbar } from "./Navbar";
+import { MovieCard } from "./MovieCard";
+import { Footer } from "./Footer";
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 const popularMoviesURL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`;
 
-const MovieList = () => {
+export const MovieList = () => {
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState("");
-  const [loading, setLoading] = useState(true); 
-  const [error, setError] = useState(null); 
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetchMovies(popularMoviesURL);
@@ -19,13 +19,13 @@ const MovieList = () => {
 
   const fetchMovies = async (url) => {
     try {
-      setLoading(true); 
+      setLoading(true);
       const response = await Axios.get(url);
       setMovies(response.data.results);
-      setLoading(false); 
+      setLoading(false);
     } catch (error) {
-      setError(error); 
-      setLoading(false); 
+      setError(error);
+      setLoading(false);
     }
   };
 
@@ -67,4 +67,4 @@ const MovieList = () => {
   );
 };
 
-export default MovieList;
+
